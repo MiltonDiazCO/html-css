@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formularios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <h2>Formulario No. 1</h2>
+    <form action="#" method="get" autocomplete="on">
+        <!-- Agrupamiento de Campos -->
+        <fieldset>
+            <legend>Datos de Inicio</legend>
+
+            <!-- Texo -->
+            <label for="nombre">Nombre*</label><br>
+            <input type="text" id="nombre" name="nombre" required autofocus placeholder="Introduza su nombre"><br>
+
+            <label for="apellido">Apellido*</label><br>
+            <input type="text" id="apellido" name="Apellido" required placeholder="Introduzca su apellido"><br>
+
+            <!-- Contraseña -->
+            <label for="contrasena">Contraseña*</label><br>
+            <input type="password" id="contrasena" name="contrasena" minlength="4" maxlength="8" required><br>
+
+            <!-- Email -->
+            <label for="correo">Correo Electronico*</label><br>
+            <input type="email" id="correo" name="correo" required placeholder="Introduzca su correo electronico"
+                size="30"><br>
+
+            <!-- Hidden -->
+            <input type="hidden" id="rol" name="rol" value="estudiante">
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos del Usurio</legend>
+
+            <!-- RadioButton -->
+            <label for="comidas">Comida Favorita</label><br>
+            <input type="radio" id="pizza" name="comidas" checked value="Pizza">
+            <label for="pizza">Pizza</label><br>
+            <input type="radio" id="hamburguesa" name="comidas" value="Hamburguesa">
+            <label for="hamburguesa">Hamburguesa</label><br>
+            <input type="radio" id="lasaña" name="comidas" value="Lasaña">
+            <label for="lasaña">Lasaña</label><br>
+
+            <!-- CheckBox -->
+            <label for="deportes">Deportes Favoritos</label><br>
+            <input type="checkbox" id="futbol" name="deportes" checked value="futbol">
+            <label for="futbol">Futbol</label><br>
+            <input type="checkbox" id="ciclismo" name="deportes" value="ciclismo">
+            <label for="ciclismo">Ciclismo</label><br>
+            <input type="checkbox" id="natacion" name="deportes" value="natacion">
+            <label for="natacion">Natación</label><br>
+
+            <!-- Color -->
+            <label for="color">Selecciona un color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <!-- Fechas y Hora -->
+            <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento"><br>
+
+            <label for="hora-nacimiento">Hora de Nacimiento</label>
+            <input type="time" id="hora-nacimiento" name="hora-nacimiento"><br>
+
+            <label for="nacimiento">Fecha y Hora de Nacimiento</label>
+            <input type="datetime-local" id="nacimiento" name="nacimiento"><br><br>
+
+            <!-- Numeros -->
+            <label for="edad">Introduzca su Edad</label>
+            <input type="number" id="edad" name="edad" min="0" max="99"><br>
+
+            <label for="multiplos">Introduzca Multiplos de 2</label>
+            <input type="number" id="multiplos" name="multiplos" step="2"><br>
+
+            <!-- Rangos -->
+            <label for="calificacion">Calificacion</label>
+            <input type="range" id="calificacion" name="calificacion"><br>
+
+            <!-- Archivos -->
+            <label for="archivo">Seleccione un Archivo</label>
+            <input type="file" id="archivo" name="archivo"><br>
+
+            <label for="archivos">Seleccione Varios Archivos</label>
+            <input type="file" id="archivos" name="archivos" multiple>
+
+            <br><br>
+
+            <!-- Botones -->
+            <input type="button" onclick="alert('Mensaje de Alerta')" value="Activar Alerta">
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+
+    <h2>Formulario No. 2</h2>
+
+    <form action="#" method="post" autocomplete="off">
+        <fieldset>
+            <legend>Otros Inputs</legend>
+
+            <input type="text" readonly value="Solo lectura"><br>
+            <input type="text" disabled value="Solo lectura"><br><br>
+
+            <textarea id="introduccion" name="introduccion" style="resize: none;"></textarea><br>
+            <textarea id="descripcion" name="descripcion" cols="20" rows="5"></textarea><br>
+
+        </fieldset>
+
+        <fieldset>
+            <Legend>Listas de Selección</Legend>
+
+            <!-- Listas de Seleccion -->
+            <label for="streams">Plataformas de Streaming</label>
+            <select id="streams" name="streams">
+                <option value="netflix">Netflix</option>
+                <option value="hbo">HBO</option>
+                <option value="amazon">Amazon</option>
+            </select><br>
+
+            <label for="colores">Colores</label><br>
+            <select id="colores" name="colores" size="3" multiple>
+                <option value="verde">Verde</option>
+                <option value="rojo">Rojo</option>
+                <option value="amarillo">Amarillo</option>
+                <option value="blanco">Blanco</option>
+                <option value="negro">Negro</option>
+                <option value="azul">Azul</option>
+                <option value="marron">Marron</option>
+                <option value="cafe">Cafe</option>
+            </select><br>
+
+            <label for="marcas">Marcas</label>
+            <input list="marcas" name="marcas">
+            <datalist id="marcas">
+                <option value="apple">Apple</option>
+                <option value="samsung">Samsung</option>
+                <option value="nokia">Nokia</option>
+                <option value="microsoft">Microsoft</option>
+                <option value="lg">LG</option>
+                <option value="HP">HP</option>
+                <option value="Honor">Honor</option>
+            </datalist><br><br>
+
+            <!-- Botones -->
+            <input type="button" onclick="alert('Mensaje de Alerta')" value="Activar Alerta">
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar">
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
