@@ -1,0 +1,45 @@
+/* Selectores de elementos */
+h1 {
+    color: purple;
+}
+
+p {
+    color: orange;
+}
+
+/* Selectores agrupando elementos */
+h3,
+h4 {
+    color: steelblue;
+}
+
+/* Selectores de id */
+#titulo {
+    color: black;
+    font-size: 50px;
+}
+
+/* Selectores de clase */
+.rojo {
+    color: red;
+}
+
+.borde {
+    border-style: solid;
+    border-color: black;
+}
+
+/* Selectores de elemento y clase */
+h2.super {
+    color: violet;
+    font-size: 25px;
+}
+
+p.super {
+    color: violet;
+}
+
+/* Selector universal */
+* {
+    color: blue;
+}
