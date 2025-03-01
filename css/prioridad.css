@@ -1,0 +1,19 @@
+#verde {
+    color: green;
+}
+
+.rojo {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+
+blockquote {
+    color: black !important;
+}
+
+* {
+    color: chocolate;
+}
