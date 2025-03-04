@@ -1,0 +1,27 @@
+.contenedor_uno {
+    background-color: orange;
+}
+
+.contenedor_dos {
+    background-color: rgb(255, 0, 255);
+}
+
+.contenedor_tres {
+    background-color: rgba(000, 255, 150, 0.3);
+}
+
+.contenedor_cuatro {
+    background-color: #d8cc7e;
+}
+
+.contenedor_cinco {
+    background-color: #e6d04770;
+}
+
+.contenedor_seis {
+    background-color: hsl(130, 50%, 50%);
+}
+
+.contenedor_siete {
+    background-color: hsla(100, 50%, 50%, 0.5);
+}
