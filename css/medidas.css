@@ -1,0 +1,30 @@
+/* Unidades Absolutas**/
+.contenedor_uno {
+    border-style: solid;
+    border-color: orange;
+    border-width: 20px;
+}
+
+.contenedor_dos {
+    border-style: solid;
+    border-color: orange;
+    border-width: 1cm;
+}
+
+/* Unidades Relativas */
+.contenedor_tres {
+    border-style: solid;
+    border-color: maroon;
+    font-size: 5px;
+    border-width: 4em;
+}
+
+.contenedor_cuatro {
+    border-style: solid;
+    border-color: maroon;
+    border-width: 4em;
+}
+
+* {
+    font-size: 20px;
+}
