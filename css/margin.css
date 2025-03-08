@@ -1,0 +1,42 @@
+.contenedor_uno {
+    width: 250px;
+    border: 10px solid yellow;
+    margin-top: 25px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.contenedor_dos {
+    width: 250px;
+    border: 10px solid green;
+    margin: 10px auto;
+}
+
+.contenedor_tres {
+    width: 250px;
+    border: 10px solid blue;
+    margin: 10px;
+}
+
+p.heredado {
+    margin: inherit;
+    border: 1px solid black;
+}
+
+p.no_heredado {
+    margin: 20px 15px 10px 5px;
+    border: 1px solid maroon;
+}
+
+.contenedor_cuatro {
+    width: 250px;
+    border: 10px solid orange;
+    margin: 30px;
+}
+
+.contenedor_cinco {
+    width: 250px;
+    border: 10px solid red;
+    margin: 35px;
+}
