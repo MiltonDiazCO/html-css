@@ -1,0 +1,25 @@
+div {
+    width: 250px;
+    padding: 25px;
+    margin: 20px;
+}
+
+.contenedor_uno {
+    outline-style: solid;
+    outline-width: 10px;
+    outline-color: maroon;
+}
+
+.contenedor_dos {
+    border: 10px solid yellow;
+}
+
+.contenedor_tres {
+    border: 10px solid red;
+    outline: 10px solid orange;
+    outline-offset: 5px;
+}
+
+.contenedor_cuatro {
+    outline: 35px solid maroon
+}
