@@ -1,0 +1,35 @@
+div {
+    width: 250px;
+    padding: 15px;
+    margin: 25px auto;
+    border: 2px solid black;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+    text-decoration: overline underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+}
+
+h2 {
+    color: red;
+    text-align: left;
+    word-spacing: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px black;
+}
+
+p.parrafo_uno {
+    text-align: justify;
+    text-align-last: justify;
+    text-indent: 25px;
+    line-height: 1.5;
+}
+
+p.parrafo_dos {
+    text-align: justify;
+    letter-spacing: 1px;
+}
