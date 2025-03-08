@@ -1,0 +1,56 @@
+div {
+    width: 250px;
+    padding: 25px;
+    margin: 10px;
+    border-width: 10px;
+    border-color: maroon;
+}
+
+.contenedor_uno {
+    border-style: solid;
+}
+
+.contenedor_dos {
+    border-style: dashed;
+}
+
+.contenedor_tres {
+    border-style: dotted;
+}
+
+.contenedor_cuatro {
+    border-style: groove;
+    border-width: 10px;
+    border-color: yellow;
+}
+
+.contenedor_cinco {
+    border-style: ridge;
+    border-width: 10px;
+    border-color: yellow;
+}
+
+.contenedor_seis {
+    border-style: solid;
+    border-top-style: dashed;
+}
+
+.contenedor_siete {
+    border-style: dashed solid dotted ridge;
+}
+
+.contenedor_ocho {
+    border-style: solid;
+    border-radius: 40px;
+}
+
+.contenedor_nueve {
+    border-style: solid;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 40px;
+}
+
+.contenedor_diez {
+    border-style: solid;
+    border-radius: 30px 50px;
+}
