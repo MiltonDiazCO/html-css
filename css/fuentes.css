@@ -1,0 +1,19 @@
+.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sans-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cursiva {
+    font-family: 'Brush Script MT', cursive;
+}
+
+.fantasy {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
