@@ -1,0 +1,46 @@
+div {
+    width: 400px;
+    height: 350px;
+}
+
+.contenedor_uno {
+    background-color: aquamarine;
+}
+
+.contenedor_dos {
+    background: rgb(77, 44, 123) url("https://img.freepik.com/vector-premium/fondo-abstracto-vendimia-ilustracion-vectorial-10-eps_448692-399.jpg");
+}
+
+.contenedor_tres {
+    background-color: blue;
+    box-shadow: 10px 10px 10px 5px yellow;
+}
+
+.contenedor_cuatro {
+    background-color: aqua;
+    box-shadow: 15px 15px 3px 1px yellow, 20px 20px 2px 1px green;
+}
+
+.contenedor_cinco {
+    background: linear-gradient(to bottom, purple, blue, aqua, black);
+}
+
+.contenedor_seis {
+    background: linear-gradient(120deg, blue, aqua);
+}
+
+.contenedor_siete {
+    background: radial-gradient(circle, blue, aqua);
+}
+
+.contenedor_ocho {
+    background: radial-gradient(ellipse, purple, black);
+}
+
+.contenedor_nueve {
+    background: conic-gradient(purple, aqua);
+}
+
+.contenedor_diez {
+    background: conic-gradient(purple, aqua, blue, black);
+}
