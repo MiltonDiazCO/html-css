@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Posicionamiento de Elementos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/posicionamiento.css">
+</head>
+
+<body>
+    <div>
+        Box 1 - position: static (default)
+        <strong>static</strong> es el valor predeterminado
+        y sigue el flujo normal del documento.
+    </div>
+
+    <div class="box-2">Box 2 - position: static</div>
+
+    <div class="box-3">
+        Box 3 - position: relative
+        <strong>relative</strong> permite mover un elemento desde su posición original
+        sin afectar a los demás.
+    </div>
+
+    <div class="box-4">
+        Box 4 - position: fixed
+        <strong>fixed</strong> lo mantiene fijo en la pantalla incluso al hacer scroll,
+        tomando como referencia la ventana del navegador.
+    </div>
+
+    <div class="box-5">Box 5
+        <div class="box-6">
+            Box 6 - position: absolute (sub-box)
+            <strong>absolute</strong> lo posiciona con respecto a su ancestro más cercano
+            con posición distinta de <strong>static.</strong>
+        </div>
+    </div>
+
+    <div class="box-7">
+        Box 7 - position: absolute (body father)
+        Si un elemento con <strong>position: absolute</strong> solo tiene ancestros
+        con position: <strong>static (valor por defecto),</strong>
+        se posicionará con respecto al <strong>html</strong> o <strong>body</strong>
+    </div>
+
+    <div class="box-8">Box 8 - position: stycky
+        <strong>sticky</strong> actúa como <strong>relative</strong>
+        hasta que se alcanza un cierto punto de desplazamiento,
+        donde se vuelve <strong>fixed.</strong>
+    </div>
+
+    <div class="box-9">Box 9</div>
+    <div class="box-10">Box-10</div>
+</body>
+
+</html>
