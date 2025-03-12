@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Display y Visivility</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/display.css">
+</head>
+
+<body>
+    <h1 class="element-1">Elemento en bloque modificado a inline</h1>
+    <p>
+        Las propiedades <strong>width</strong> y <strong>height</strong>
+        no funcionan en los elementos inline porque estos solo ocupan
+        el espacio necesario para su contenido y no permiten ajustar
+        su tamaño explícitamente.
+    </p>
+
+    <h1 class="element-2">Título 2</h1>
+    <h1 class="visibility-element">visibility: hidden</h1>
+    <p>
+        <strong>visibility: hidden;</strong> funciona en cualquier tipo de elemento,
+        ocultándolo visualmente pero manteniendo su espacio en la página,
+        a diferencia de <strong>display: none;</strong>,
+        que lo elimina por completo del flujo del documento.
+    </p>
+
+    <h1 class="none-element">display: none</h1>
+
+    <a href="#">Elemento inline modificado a block</a>
+    <a href="#">Elemento inline modificado a block</a>
+
+    <p>Este <span>texto (inline-block)</span> se muestra en una caja</p>
+</body>
+
+</html>
