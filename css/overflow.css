@@ -1,0 +1,44 @@
+div {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.box-1 {
+    background-color: yellow;
+    overflow: visible;
+}
+
+.box-2 {
+    background-color: blanchedalmond;
+    overflow: hidden;
+}
+
+.box-3 {
+    background-color: cadetblue;
+    overflow: scroll;
+}
+
+.box-4 {
+    background-color: chocolate;
+    overflow: auto;
+}
+
+.box-5 {
+    background-color: chocolate;
+    overflow: auto;
+}
+
+.box-6 {
+    background-color: blanchedalmond;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.box-7 {
+    background-color: blanchedalmond;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
