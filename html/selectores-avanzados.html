@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selectores Avanzados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/selectores-avazados.css">
+</head>
+
+<body>
+    <h1>Selector Descendiente</h1>
+
+    <div class="selector-descendiente">
+        <p>
+            El selector descendiente (A B) aplica
+            estilos a todos los elementos B que estén dentro de A,
+            sin importar el nivel de anidación.</p>
+        <article>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <article>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </article>
+        </article>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <hr>
+
+    <H1>Selector Hijo</H1>
+
+    <div class="selector-hijo">
+        <p>
+            El selector hijo (A > B) solo aplica estilos
+            a los elementos B que sean hijos directos de A.
+        </p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <article>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <hr>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h1 class="selector-hermano-adyacente">Selector Hermano Adyacente</h1>
+    <p>
+        El selector adyacente (A + B) selecciona el primer elemento B
+        que aparece inmediatamente después de A en el mismo nivel.
+    </p>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <hr>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h1 class="selector-hermano-general">Selector Hermano General</h1>
+    <p>
+        El selector general de hermanos (A ~ B) selecciona todos los
+        elementos B que sean hermanos de A, sin importar si están inmediatamente
+        después o no.
+    </p>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>

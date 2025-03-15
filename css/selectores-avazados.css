@@ -1,0 +1,15 @@
+.selector-descendiente p {
+    color: green;
+}
+
+.selector-hijo > p {
+    color: blue;
+}
+
+.selector-hermano-adyacente + p {
+    color: orange;
+}
+
+.selector-hermano-general ~ p {
+    color: red;
+}
