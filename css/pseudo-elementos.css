@@ -1,0 +1,30 @@
+h1 {
+    color: palevioletred;
+}
+
+h1::first-letter {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+
+p::first-line {
+    color: brown;
+}
+
+p::selection {
+    color: purple;
+    background-color: pink;
+}
+
+h2::before {
+    content: "Before";
+    color: blue;
+}
+
+h2::after {
+    content: "After";
+    color: green;
+}
