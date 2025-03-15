@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pseudo Clases</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pseudo-clases.css">
+</head>
+
+<body>
+    <p>
+        Las pseudoclases en CSS aplican estilos
+        a elementos en estados específicos.
+    </p>
+
+    <div>
+        <p>
+            Pseudo clase hover
+            <strong>:hover</strong> se activa cuando el usuario
+            pasa el cursor sobre un elemento.
+        </p>
+    </div>
+
+    <form>
+        <p>
+            <strong>:focus</strong> se aplica cuando un elemento,
+            como un campo de formulario, recibe el foco.
+        </p>
+        <label for="name">Esriba su nombre</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="lastname">Escriba su Apellido</label>
+        <input type="text" id="lastname" name="lastname">
+    </form>
+
+    <p>
+        <strong>:first-child y :last-child</strong> aplican estilos
+        al primer y último hijo de un contenedor, respectivamente.
+    </p>
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+
+    <p>
+        <strong>:not(selector)</strong> excluye elementos
+        que coincidan con el selector dado.
+    </p>
+
+    <section>
+        <p class="descart">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+</body>
+
+</html>

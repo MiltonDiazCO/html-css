@@ -1,0 +1,31 @@
+div {
+    width: 50%;
+    border: 2px solid black;
+    margin: 25px;
+    padding: 25px;
+    background-color: yellow;
+    font-size: 30px;
+    text-align: center;
+}
+
+div:hover {
+    background-color: red;
+    color: white;
+}
+
+input:focus {
+    background-color: darkseagreen;
+    color: white;
+}
+
+li:first-child {
+    color: green;
+}
+
+li:last-child {
+    color: red;
+}
+
+section p:not(.descart) {
+    color: blue;
+}
