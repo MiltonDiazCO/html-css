@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Estilos de Tablas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos-tablas.css">
+</head>
+
+<body>
+    <p>
+        Para dar estilos a una tabla, por ejemplo, a las filas pares e impares,
+        se puede usar la pseudo-clase <strong>:nth-child()</strong> con los valores
+        <strong>odd</strong> para las filas impares y <strong>even</strong>
+        para las filas pares.
+        Esta pseudo-clase selecciona elementos en función de su posición
+        entre sus hermanos dentro de un contenedor padre.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Curso</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juan</td>
+                <td>Lopez</td>
+                <td>302</td>
+                <td>3,4</td>
+            </tr>
+            <tr>
+                <td>Oscar</td>
+                <td>Sanchez</td>
+                <td>301</td>
+                <td>4,2</td>
+            </tr>
+            <tr>
+                <td>Luis</td>
+                <td>Mendoza</td>
+                <td>301</td>
+                <td>3,3</td>
+            </tr>
+            <tr>
+                <td>Jose</td>
+                <td>Sanchez</td>
+                <td>302</td>
+                <td>3,0</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
