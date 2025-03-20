@@ -10,17 +10,20 @@
 
 <body>
 
-    <h1>Prioridad de Selectores CSS</h1>
+    <h1>Prioridad de Selectores CSS (Especificidad)</h1>
 
     <ol>
         <li>
             <p id="verde" class="rojo">Selectores por ID</p>
         </li>
         <li>
-            <p class="rojo">Selectores de Clase</p>
+            <p class="rojo">
+                Selectores de Clase, atributos y pseudoclases
+                <strong><code>(.clase, [type="text"], :hover)</code></strong>
+            </p>
         </li>
         <li>
-            <p>Selectores de Elementos</p>
+            <p>Selectores de Elementos y pseudoelementos</p>
         </li>
         <li>
             <pre>Selector Universal</pre>
@@ -28,7 +31,8 @@
     </ol>
 
     <blockquote id="verde" class="rojo" cite="https://wikipedia.com/">
-        Regla !important
+        Regla !important, se impone sobre cualquier especificidad,
+        pero debe usarse con cuidado.
     </blockquote>
 
 </body>
