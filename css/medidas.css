@@ -12,19 +12,24 @@
 }
 
 /* Unidades Relativas */
-.contenedor_tres {
-    border-style: solid;
-    border-color: maroon;
+.contenedor_padre {
     font-size: 5px;
-    border-width: 4em;
+}
+
+.contenedor_tres {
+    border: 5px solid maroon;
+    font-size: 8em;
 }
 
 .contenedor_cuatro {
     border-style: solid;
     border-color: maroon;
-    border-width: 4em;
+    font-size: 15px;
+    border-width: 2em;
 }
 
-* {
-    font-size: 20px;
+.contenedor_cinco {
+    border-style: solid;
+    border-color: maroon;
+    border-width: 4rem;
 }

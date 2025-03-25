@@ -10,6 +10,12 @@
 
 <body>
     <h1>Unidades Absolutas</h1>
+    <p>
+        Las medidas absolutas, como <strong>px (píxeles)</strong>,
+        <strong>cm (centímetros)</strong> y <strong>in (pulgadas)</strong>,
+        tienen un tamaño fijo.
+    </p>
+
     <div class="contenedor_uno">
         Pixeles
     </div><br>
@@ -19,16 +25,41 @@
     </div>
 
     <h1>Unidades Relativas</h1>
+    <p>Las medidas relativas dependen del contexto,
+        como <strong>em y rem</strong> (basadas en el tamaño de fuente),
+        <strong>%</strong> (proporcional al tamaño del contenedor padre),
+        <strong>vw y vh</strong> (porcentajes del ancho y alto de la ventana).
+        Usar medidas relativas ayuda a mejorar la responsividad
+        y accesibilidad del diseño.
+        Tambien estas las unidades <strong>vmax</strong> y <strong>vmin</strong>
+        que también son relativas al tamaño del viewport.
+        <strong>vmax</strong> toma como referencia el valor mayor
+        entre el ancho <strong>(vw)</strong> y el alto <strong>(vh)</strong>,
+        mientras que <strong>vmin</strong> usa el menor.
+    </p>
 
     <h2>EM</h2>
-    <div class="contenedor_tres">
-        em
+
+    <p>
+        Las unidades <strong>em y rem</strong> son medidas relativas basadas en el
+        tamaño de fuente.
+        <strong>em</strong> depende del tamaño de fuente del elemento padre,
+        lo que puede generar efectos acumulativos en elementos anidados.
+        <strong>rem (root em)</strong> siempre se basa en el tamaño de fuente
+        del elemento raíz <strong><code>html</code></strong>,
+        generalmente 16px por defecto.
+        <strong></strong> es más predecible para diseños escalables,
+        mientras que em es útil para estilos ajustables dentro de componentes específicos.
+    </p>
+
+    <div class="contenedor_padre">
+        <div class="contenedor_tres">em</div><br>
     </div>
 
+    <div class="contenedor_cuatro">em</div>
+
     <h2>REM</h2>
-    <div class="contenedor_cuatro">
-        rem
-    </div>
+    <div class="contenedor_cinco">rem</div>
 </body>
 
 </html>
