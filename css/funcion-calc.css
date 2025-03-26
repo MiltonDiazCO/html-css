@@ -1,0 +1,17 @@
+:root {
+    --fuente: 18px;
+    --width-border: 5px;
+    --width-var: 50%;
+}
+
+body {
+    font-size: var(--fuente);
+}
+
+.box-1 {
+    background-color: lightblue;
+    font-size: calc(30px - 15px);
+    padding: calc(1em + 2px);
+    border: calc(var(--width-border) + 3px) solid red;
+    width: calc(var(--width-var) + 25%);
+}
