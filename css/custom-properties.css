@@ -1,0 +1,36 @@
+:root {
+    --item-color: indigo;
+}
+
+body {
+    background-color: #223;
+}
+
+.container {
+    height: 400px;
+    background-color: gray;
+}
+
+.item {
+    height: 100px;
+    background-color: var(--item-color, black);
+}
+
+.item-1 {
+    --item-color-1: papayawhip;
+    background-color: var(--item-color-1);
+}
+
+.item-2 {
+    background-color: var(--item-color-2);
+    --item-color-2: green;
+}
+
+.item-3 {
+    --item-local: yellow;
+
+}
+
+.item-4 {
+    background-color: var(--item-local);
+}
