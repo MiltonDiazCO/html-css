@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+}
+
+img {
+    height: 2em;
+}
+
+li {
+    color: white;
+    display: inline-block;
+    margin: 0 1em;
+}
+
+a {
+    color: white;
+    background-color: #555;
+    padding: 0.5em;
+    border-radius: 20px;
+}
