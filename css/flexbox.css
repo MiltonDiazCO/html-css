@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: antiquewhite;
+    margin: 0.5em;
+    border: 5px solid black;
+}
+
+.flex-container {
+    display: flex;
+    font-size: 50px;
+    width: 5em;
+    height: 5em;
+}
+
+.item {
+    width: 60px;
+    height: 50px;
+    border: 5px solid blue;
+    border-radius: 5px;
+    background-color: darkcyan;
+}
+
+.flex-container-direction {
+    flex-direction: row-reverse;
+}
+
+.flex-container-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-container-flow {
+    flex-flow: column wrap;
+}
+
+.flex-container-justify-content {
+    justify-content: space-evenly;
+}
+
+.flex-container-align-content {
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.flex-container-align-items {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.item-align-one,
+.item-align-six {
+    height: 100px;
+}
+
+.flex-container-align-self {
+    flex-wrap: wrap;
+}
+
+.item-self-one,
+.item-self-six {
+    height: 100px;
+}
+
+.item-self-one {
+    align-self: flex-end;
+}
+
+.item-self-six {
+    align-self: center;
+}
+
+.item-order-one {
+    order: 3;
+}
+
+.item-order-two {
+    order: 2;
+}
+
+.item-order-three {
+    order: 1;
+}
+
+.item-shrink-one {
+    flex-shrink: 70;
+}
+
+.item-grow-three {
+    flex-grow: 1;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/flexbox.css">
+</head>
+
+<body>
+    <section>
+        <h1>flexbox</h1>
+        <p>
+            <strong>Flexbox (Flexible Box Layout)</strong> es un modelo de diseño en CSS
+            que permite organizar elementos en filas o columnas.
+            Se utiliza para crear diseños complejos y adaptables a diferentes
+            formatos de pantalla. Funciona con un contenedor flexible
+            <strong><code>(display: flex o inline-flex)</code></strong> que organiza
+            los elementos en un main axis (horizontal o vertical según flex-direction)
+            y un cross axis (perpendicular al main axis).
+        </p><br>
+    </section>
+
+    <section>
+        <div>
+            <h2>flex-direction</h2>
+            <p>
+                <strong><code>flex-direction:</code></strong> Define la dirección principal
+                en la que los elementos flexibles se organizan dentro del contenedor.
+                Puede ser row (horizontal, de izquierda a derecha),
+                row-reverse (horizontal, de derecha a izquierda),
+                column (vertical, de arriba a abajo)
+                o column-reverse (vertical, de abajo a arriba).
+            </p>
+        </div>
+
+        <div class="container flex-container flex-container-direction">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>flex-wrap</h2>
+            <p>
+                <strong><code>flex-wrap:</code></strong> Controla si los elementos flexibles
+                deben ajustarse en una sola línea o pueden envolver a nuevas líneas cuando
+                no hay suficiente espacio. Puede ser nowrap (todos en una sola línea),
+                wrap (se envuelven en múltiples líneas)
+                o wrap-reverse (se envuelven en múltiples líneas pero en dirección inversa).
+            </p>
+        </div>
+
+        <div class="container flex-container flex-container-wrap">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>flex-flow</h2>
+            <p>
+                <strong><code>flex-flow:</code></strong> Es una propiedad abreviada
+                que combina <strong><code>flex-direction y flex-wrap</code></strong>,
+                permitiendo definir ambas en una sola línea. Por ejemplo,
+                <strong>flex-flow: row wrap;</strong> organizará los elementos
+                en fila y permitirá que se envuelvan en varias líneas si es necesario.
+            </p>
+        </div>
+
+        <div class="container flex-container flex-container-flow">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>main axis/cross axis</h2>
+        <p>
+            <strong>main axis:</strong> Es el eje principal en el que los elementos
+            flexibles se organizan. Su dirección depende de flex-direction.
+            Si flex-direction es row, el main axis es horizontal;
+            si es column, el main axis es vertical.
+            <strong>cross axis:</strong> Es el eje perpendicular al main axis.
+            Si flex-direction es row, el cross axis será vertical,
+            y si flex-direction es column, el cross axis será horizontal.
+        </p><br>
+    </section>
+
+    <section>
+        <div>
+            <h2>justify-content</h2>
+            <p>
+                <strong><code>justify-content:</code></strong> Controla la alineación
+                de los elementos flexibles a lo largo del <strong>main axis.</strong>
+                Sus valores incluyen flex-start (alineados al inicio),
+                flex-end (alineados al final), center (centrados),
+                space-between (espaciados uniformemente con el primero
+                y el último pegados a los extremos)
+                space-evenly (espaciados uniformemente, incluyendo los extremos.)
+                y space-around (espaciados uniformemente, pero con márgenes más
+                pequeños en los extremos.).
+            </p>
+        </div>
+
+        <div class="container flex-container flex-container-justify-content">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>align-content</h2>
+            <p>
+                <strong><code>align-content:</code></strong> Alinea las filas de elementos
+                flexibles a lo largo del <strong>cross axis </strong>
+                cuando hay varias líneas (cuando flex-wrap es diferente de nowrap).
+                Puede ser flex-start, flex-end, center, space-between, space-around
+                o stretch (ocupa todo el espacio disponible).
+            </p>
+        </div>
+
+        <div class="container flex-container flex-container-align-content">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>align-items</h2>
+            <p>
+                <strong><code>align-items:</code></strong> Controla la alineación de los
+                elementos en el <strong>cross axis <em>de forma individual
+                        para cada línea</em></strong>
+                Puede ser flex-start, flex-end, center,
+                baseline (alineados según la línea base del texto)
+                o stretch (ocupa todo el alto disponible).
+            </p>
+        </div>
+
+        <div class="container flex-container flex-container-align-items">
+            <div class="item item-align-one">1</div>
+            <div class="item item-align-two">2</div>
+            <div class="item item-align-three">3</div>
+            <div class="item item-align-four">4</div>
+            <div class="item item-align-five">5</div>
+            <div class="item item-align-six">6</div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>align-self</h2>
+            <p>
+                <strong><code>align-self:</code></strong> Permite personalizar
+                la alineación de un elemento específico dentro del
+                <strong>cross axis,</strong> sobrescribiendo align-items
+                para ese solo elemento. Sus valores son los mismos que align-items.
+            </p>
+        </div>
+
+        <div class="container flex-container flex-container-align-self">
+            <div class="item item-self-one">1</div>
+            <div class="item item-self-two">2</div>
+            <div class="item item-self-three">3</div>
+            <div class="item item-self-four">4</div>
+            <div class="item item-self-five">5</div>
+            <div class="item item-self-six">6</div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>order</h2>
+            <p>
+                <strong><code>order:</code></strong> Determina el orden en que los
+                elementos flexibles aparecen dentro del contenedor. Por defecto,
+                todos tienen order: 0, pero se pueden asignar valores positivos
+                o negativos para reorganizar su posición sin cambiar el HTML.
+                Los elementos con un valor menor se mostraran primero
+            </p>
+        </div>
+
+        <div class="container flex-container flex-container-order">
+            <div class="item item-order-one">1</div>
+            <div class="item item-order-two">2</div>
+            <div class="item item-order-three">3</div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>flex-shrink</h2>
+            <p>
+                <strong><code>order:</code></strong> Define la capacidad
+                de un elemento flexible para reducir su tamaño
+                <strong>cuando el espacio es limitado.</strong>
+                Un valor mayor hace que el elemento se reduzca más en
+                comparación con otros elementos flexibles con menor flex-shrink.
+            </p>
+        </div>
+
+        <div class="container flex-container flex-container-shrink">
+            <div class="item item-shrink-one">1</div>
+            <div class="item item-shrink-two">2</div>
+            <div class="item item-shrink-three">3</div>
+            <div class="item item-shrink-four">4</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-grow</h2>
+        <p>
+            <strong><code>flex-grow:</code></strong> Controla cuánto puede crecer
+            un elemento flexible en comparación con otros dentro del contenedor
+            <strong>cuando hay espacio disponible.</strong>
+            Un valor de 0 significa que no crecerá, mientras que un valor mayor
+            permitirá que el elemento crezca más que los demás.
+        </p>
+
+        <div class="container flex-container flex-container-grow">
+            <div class="item item-grow-one">1</div>
+            <div class="item item-grow-two">2</div>
+            <div class="item item-grow-three">3</div>
+        </div>
+    </section>
+</body>
+
+</html>
