@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Grid</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/grid.css" />
+</head>
+
+<body>
+  <section>
+
+    <h1>CSS Grid</h1>
+
+    <p>
+      <strong>CSS Grid</strong> es un sistema de diseño en CSS que permite
+      crear diseños en dos dimensiones <strong>(filas y columnas)</strong>
+      de manera precisa, flexible y responsiva.
+    </p>
+
+    <p>
+      <strong><code>display: grid</code></strong>
+      Convierte un contenedor en un grid container,
+      lo que permite usar todas las propiedades de Grid Layout
+      en sus elementos hijos
+      <strong>(los "grid items").</strong>
+    </p>
+
+    <p>
+      <strong><code>grid-template-columns</code></strong>
+      Define el número, tamaño y comportamiento de las columnas del grid
+      explícito. Ej: <code>grid-template-columns: 150px 280px;</code>
+    </p>
+
+    <p>
+      <strong><code>grid-template-rows</code></strong>
+      Define el número, tamaño y comportamiento de las filas del grid
+      explícito. Ej: <code>grid-template-rows: 50px 100px 150px;</code>
+    </p>
+
+    <p>
+      <strong>grid-explicit</strong> No es una propiedad en sí,
+      pero se refiere al grid definido explícitamente usando
+      <strong>grid-template-columns y grid-template-rows.</strong>
+    </p>
+
+    <p>
+      <strong>grid-implicit</strong>Tampoco es una propiedad. Se refiere al
+      grid generado automáticamente cuando hay más elementos de los que
+      caben en el grid explícito.
+      <strong>grid-auto-columns y grid-auto-rows</strong>
+    </p>
+
+    <p>
+      <strong><code>grid-auto-columns</code></strong>
+      Define el tamaño de las columnas implícitas que se crean si se colocan
+      elementos fuera del grid explícito.
+    </p>
+
+    <p>
+      <strong><code>grid-auto-rows</code></strong>
+      Igual que el anterior, pero para filas implícitas.
+    </p>
+
+    <p>
+      <strong><code>grid-auto-flow</code></strong>
+      Controla cómo se colocan automáticamente los elementos si no se
+      especifican posiciones. Puede ser:
+    </p>
+
+    <ul>
+      <li><strong>row (predeterminado):</strong> llenado por filas</li>
+      <li><strong>column:</strong> llenado por columnas</li>
+      <li><strong>dense:</strong> trata de llenar huecos</li>
+    </ul>
+
+    <div class="container grid-container grid-basic">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>min-content</h2>
+
+    <p>
+      <strong><code>min-content</code></strong>
+      Toma el mínimo tamaño necesario para que el contenido no se desborde.
+    </p>
+
+    <div class="container grid-container grid-min-content">
+      <div class="item">Hola Mundo</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <h2>max-content</h2>
+
+    <p>
+      <strong><code>max-content</code></strong>
+      Toma el máximo tamaño que puede tener el contenido sin romperse.
+    </p>
+
+    <div class="container grid-container grid-max-content">
+      <div class="item">Hola Mundo</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <h2>minmax()</h2>
+    <p>
+      <strong><code>minmax()</code></strong>
+      Define un rango entre un tamaño mínimo y uno máximo.
+      Ideal para diseños responsivos. Ej: <code>minmax(300px, 500px)</code>
+    </p>
+
+    <div class="container grid-container grid-minmax">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Definiciones importantes de CSS Grid</h2>
+
+    <ul>
+      <li><strong>Contenedor:</strong>
+        Es el elemento padre al que se le aplica
+        <code></code>display: grid;</code>
+        Es el que activa el sistema de cuadrícula.
+      </li>
+      <li>
+        <strong>Cuadrícula:</strong>
+        Es la estructura de líneas (filas y columnas)
+        que se crea dentro del contenedor.
+        Es como una tabla invisible donde se ubican los elementos.
+      </li>
+      <li>
+        <strong>Celda:</strong>
+        Es el espacio individual entre una fila y una columna.
+        Como en Excel, cada punto de cruce es una celda.
+        Los elementos pueden ocupar una o varias celdas.
+      </li>
+      <li>
+        <strong>Ítem:</strong>
+        Es cada hijo directo del contenedor grid.
+        Son los elementos que se posicionan en la cuadrícula.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>Medidas, funciones y palabras clave</h1>
+
+    <h2>fr (fracción)</h2>
+    <p>
+      La unidad fr significa “fracción del espacio disponible” en el grid.
+      Es muy útil para distribuir el espacio de forma proporcional.
+      Por ejemplo, si tienes <code>grid-template-columns: 1fr 2fr,</code>
+      significa que la segunda columna ocupará el doble de ancho que la primera.
+      No se refiere a píxeles, sino a partes iguales del espacio restante
+      después de asignar tamaños fijos (como px o auto)
+    </p>
+
+    <h2>auto</h2>
+    <p>
+      La palabra clave auto le dice al grid que la fila o columna debe ocupar
+      solo el espacio necesario para su contenido.
+      Por ejemplo, si usas <code>grid-template-columns: auto auto,</code>
+      cada columna tendrá el ancho que necesite el contenido dentro de ella,
+      sin estirarse para llenar el contenedor.
+    </p>
+
+    <h2>repeat()</h2>
+    <p>
+      La función repeat() es una forma más limpia de escribir
+      varias columnas o filas con el mismo tamaño.
+      Por ejemplo, en lugar de escribir <code>1fr 1fr 1fr 1fr,</code>
+      puedes usar <code>repeat(4, 1fr),</code> que crea 4 columnas iguales.
+      También se puede usar con otros valores, como repeat(3, auto) o combinaciones
+      más avanzadas como repeat(auto-fill, minmax(200px, 1fr)) para diseños responsivos.
+    </p>
+
+    <h2>span</h2>
+    <p>
+      La palabra clave span se usa en los elementos hijos del grid para indicar
+      que deben ocupar varias celdas. Por ejemplo, si escribes
+      <code>grid-column: span 2,</code> ese elemento ocupará dos columnas.
+      Se puede usar también en filas <strong>(grid-row: span 3).</strong>
+      Es muy útil para crear layouts más complejos donde algunos ítems ocupan
+      más espacio que otros.
+    </p>
+
+    <h2>Posicionamiento con líneas negativas</h2>
+    <p>
+      Se puede hacer uso de valores negativos como <strong>-1</strong>
+      en propiedades como <code>grid-column o grid-row,</code>
+      esto quiere decir que se esta contando desde o hasta el final de la grilla
+      Por ejemplo, <code>grid-column: 1 / -1;</code>
+      Esto significa que el elemento comienza en la primera línea de columna
+      y se extiende hasta la última línea de columna, ocupando todas las columnas
+      disponibles (de borde a borde).
+    </p>
+  </section>
+
+  <section>
+    <h2>auto-fill</h2>
+
+    <p>
+      <strong><code>auto-fill:</code></strong> Intenta llenar el contenedor
+      con tantas columnas (o filas) como quepan, aunque estén vacías.
+    </p>
+
+    <div class="container grid-container grid-auto-fill">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h2>auto-fit</h2>
+
+    <p>
+      <strong><code>auto-fit:</code></strong> Hace lo mismo,
+      pero colapsa (esconde) las columnas vacías,
+      permitiendo que las demás se expandan o adapten.
+    </p>
+
+    <div class="container grid-container grid-auto-fit">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <p>
+      <strong><code>auto-fill y auto-fit </code></strong>
+      se usan con repeat() en la definición de columnas o filas
+      y junto con medidas que no sean fijas.
+    </p>
+  </section>
+
+  <section>
+    <h2>grid-column-gap</h2>
+
+    <p>
+      <strong><code>grid-column-gap:</code></strong>
+      Define el espacio horizontal entre columnas del grid.
+    </p>
+
+    <div class="container grid-container grid-basic grid-column-gap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+
+    <h2>grid-row-gap</h2>
+
+    <p>
+      <strong><code>grid-row-gap</code></strong>
+      Define el espacio vertical entre filas del grid.
+    </p>
+
+    <div class="container grid-container grid-basic grid-row-gap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+
+    <h2>gap</h2>
+
+    <p>
+      <strong><code>gap</code></strong>
+      Es una forma abreviada para definir ambos espacios al mismo tiempo.
+    </p>
+
+    <div class="container grid-container grid-basic grid-gap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>grid-column-start, grid-column-end</h2>
+
+    <p>
+      Controlan desde qué línea hasta qué línea ocupa un elemento
+      en las columnas del grid.
+    </p>
+
+    <h2>grid-row-start, grid-row-end</h2>
+
+    <p>
+      Lo mismo que las anteriores, pero para las filas.
+    </p>
+
+    <div class="container grid-container grid-basic grid-start-end">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+
+    <h2>grid-column, grid-row</h2>
+
+    <p>
+      <code>grid-column: </code>Es una abreviatura para
+      <code>grid-column-start / grid-column-end.</code>
+      <code>grid-row</code> Es una abreviatura para
+      <code>grid-row-start / grid-row-end</code>
+    </p>
+
+    <div class="container grid-container grid-basic grid-column-row">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>grid-area (Usando valores numéricos)</h2>
+    <p>
+      Permite especificar en qué área del grid se colocará un elemento.
+      Puede usarse de dos formas: (Con valores numéricos o nombrando áreas del grid).
+      <strong>grid-row-start / grid-column-start / grid-row-end / grid-column-end</strong>
+    </p>
+
+    <div class="container grid-container grid-basic grid-area-numerico">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>grid-template-areas, grid-area</h2>
+    <p>
+      <strong><code>grid-template-areas</code></strong>
+      Se usa en el contenedor de grid para definir visualmente
+      cómo se distribuirán las áreas dentro de la cuadrícula.
+      Es como dibujar el layout usando nombres.
+    </p>
+
+    <p>
+      <strong><code>grid-area</code></strong>
+      Se usa en los elementos hijos del grid para asignarlos
+      a una de las áreas definidas en <code>grid-template-areas.</code>
+    </p>
+
+    <div class="container grid-container grid-template-areas">
+      <div class="item">header</div>
+      <div class="item">sidebar</div>
+      <div class="item">content</div>
+      <div class="item">footer</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>justify-content</h2>
+    <p>
+      Esta propiedad se usa en el contenedor del grid y sirve para alinear
+      todo el contenido del grid horizontalmente dentro del espacio disponible.
+      Por ejemplo, si el grid no ocupa todo el ancho del contenedor,
+      puedes moverlo hacia la izquierda, el centro o la derecha con valores como start,
+      center, end, space-between, space-around o space-evenly.
+    </p>
+
+    <div class="container grid-container grid-basic grid-justify-content">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>align-content</h2>
+    <p>
+      También se aplica al contenedor del grid, pero alinea el contenido verticalmente.
+      Es útil cuando el grid tiene varias filas que no llenan toda la altura del contenedor.
+      Igual que justify-content, se puede mover el grid hacia arriba,
+      abajo o distribuir el espacio entre filas usando valores similares
+      (start, center, end, etc.).
+    </p>
+
+    <div class="container grid-container grid-basic grid-align-content">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>justify-items</h2>
+    <p>
+      Esta propiedad se aplica a todos los elementos hijos del grid y controla
+      cómo se alinean horizontalmente dentro de sus propias celdas.
+      Por ejemplo, si se pone <code>justify-items: center,</code>
+      todos los elementos se centrarán horizontalmente
+      dentro de sus respectivas áreas del grid.
+    </p>
+
+    <div class="container grid-container grid-basic grid-justify-items">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>align-items</h2>
+    <p>
+      Funciona igual que <strong>justify-items,</strong>
+      pero en el eje vertical. Se usa en el contenedor y alinea
+      todos los elementos hijos verticalmente dentro de sus celdas.
+      Con valores como start, center, end o stretch,
+      se puede controlar si el contenido queda arriba, centrado,
+      abajo o estiradoen cada celda.
+    </p>
+
+    <div class="container grid-container grid-basic grid-align-items">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>justify-self</h2>
+    <p>
+      Esta propiedad se aplica a un solo elemento hijo y controla
+      su alineación horizontal dentro de su celda.
+      Es útil si se quiere que un elemento específico tenga una alineación
+      distinta del resto. Por ejemplo, puedes centrar solo un ítem
+      con <code>justify-self: center.</code>
+    </p>
+
+    <div class="container grid-container grid-basic grid-justify-self">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>align-self</h2>
+    <p>
+      Al igual que <code>justify-self,</code> esta propiedad
+      se aplica a un solo elemento hijo,
+      pero controla su posición vertical dentro de la celda.
+      Con <strong>align-self</strong> se puede colocar un elemento
+      en la parte superior, centro, inferior o hacer que se estire
+      para ocupar toda la altura disponible de la celda.
+    </p>
+
+    <div class="container grid-container grid-basic grid-align-self">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </section>
+</body>
+
+</html>
